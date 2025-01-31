@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"go_study/basic_programs"
+	"go_study/patterns"
 )
 
 func main() {
@@ -63,6 +64,21 @@ func main() {
 	// Check if number is prime number
 	fmt.Println("---- Num_is_prime ----")
 	fmt.Println(basic_programs.Num_is_prime(5))
+
+	patterns.Rectangle()
+	patterns.Star_pyramid()
+	patterns.Right_angled_triangle()
+	patterns.Right_angles_same_num_rows()
+	patterns.Right_angles_num_pyramid()
+	patterns.Num_Crown()
+	patterns.Inverter_pyramid()
+	patterns.Inverted_right_pyramid()
+	patterns.Inverted_right_num_pyramid()
+	patterns.Increasing_num_right_triangle()
+	patterns.Increasing_decreasing_letter_triangle()
+	patterns.Half_diamond_pattern()
+	patterns.Diamond()
+	patterns.Alternate_binary_num_right_angle()
 }
 
 // SA Interview
