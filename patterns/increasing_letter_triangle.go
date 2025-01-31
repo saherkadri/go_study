@@ -3,7 +3,7 @@ package patterns
 import "fmt"
 
 func Increasing_decreasing_letter_triangle() {
-	fmt.Println("---- Increasing_decreasing_letter_triangle ----")
+	fmt.Println("---- Increasing_letter_triangle ----")
 	n := 5
 	/*
 		A
@@ -19,7 +19,7 @@ func Increasing_decreasing_letter_triangle() {
 		}
 		fmt.Println()
 	}
-
+	fmt.Println()
 	/////
 
 	/*
@@ -30,6 +30,8 @@ func Increasing_decreasing_letter_triangle() {
 		AB
 		A
 	*/
+	fmt.Println()
+	fmt.Println("---- Decreasing_letter_triangle ----")
 	for i := 0; i <= n; i++ {
 		for j := 0; j <= n-i; j++ {
 			fmt.Print(string('A' + j))
@@ -55,7 +57,7 @@ func Increasing_decreasing_letter_triangle() {
 		BB
 		A
 	*/
-
+	fmt.Println("... Vertical half diamond ...")
 	for i := 0; i <= n; i++ {
 		for j := 0; j <= i; j++ {
 			fmt.Print(string('A' + i))

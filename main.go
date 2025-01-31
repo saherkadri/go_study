@@ -65,6 +65,21 @@ func main() {
 	fmt.Println("---- Num_is_prime ----")
 	fmt.Println(basic_programs.Num_is_prime(5))
 
+	// Merge and sort 2 arrays
+	array1 := []int{1, 2, 3, 0, 0, 0}
+	array2 := []int{2, 5, 6}
+	m, n := 3, 3
+	basic_programs.Merge(array1, m, array2, n)
+
+	// Remove duplicates
+	k := basic_programs.RemoveDuplicates(array1)
+	fmt.Println(k)
+
+	//
+	remove_ele := 3
+	res := basic_programs.RemoveElement(array1, remove_ele)
+	fmt.Println(res)
+
 	patterns.Rectangle()
 	patterns.Star_pyramid()
 	patterns.Right_angled_triangle()
