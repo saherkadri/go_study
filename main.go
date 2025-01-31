@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"go_study/basic_programs"
+	"go_study/linked_list"
 	"go_study/patterns"
 )
 
@@ -75,11 +76,12 @@ func main() {
 	k := basic_programs.RemoveDuplicates(array1)
 	fmt.Println(k)
 
-	//
+	// Remove specified element from array
 	remove_ele := 3
 	res := basic_programs.RemoveElement(array1, remove_ele)
 	fmt.Println(res)
 
+	// Pattern Printing
 	patterns.Rectangle()
 	patterns.Star_pyramid()
 	patterns.Right_angled_triangle()
@@ -94,6 +96,22 @@ func main() {
 	patterns.Half_diamond_pattern()
 	patterns.Diamond()
 	patterns.Alternate_binary_num_right_angle()
+
+	// Linked List
+	// Creating two linked lists
+	fmt.Println()
+	fmt.Println("--------------------------------------------------")
+	fmt.Println("Create linked list from array and sum elements and print res i.e 2+5, 4+6,3+4 = 807 starting from last")
+	l1 := linked_list.CreateList([]int{2, 4, 3}) // represents the number 342
+	l2 := linked_list.CreateList([]int{5, 6, 4}) // represents the number 465
+	linked_list.Printll(l1)
+	linked_list.Printll(l2)
+	// Adding the two numbers
+	result := linked_list.AddTwoNumbers(l1, l2)
+
+	// Printing the result linked list
+	fmt.Println("... Addition of LinkedList elements ...")
+	linked_list.Printll(result) // Output should be 7 -> 0 -> 8 (which is 807)
 }
 
 // SA Interview
