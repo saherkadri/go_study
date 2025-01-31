@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"go_study/basic_programs"
+	"go_study/channels"
 	"go_study/linked_list"
 	"go_study/patterns"
 )
@@ -81,7 +82,7 @@ func main() {
 	res := basic_programs.RemoveElement(array1, remove_ele)
 	fmt.Println(res)
 
-	// Pattern Printing
+	// ----------------- Pattern Printing -----------------
 	patterns.Rectangle()
 	patterns.Star_pyramid()
 	patterns.Right_angled_triangle()
@@ -97,7 +98,7 @@ func main() {
 	patterns.Diamond()
 	patterns.Alternate_binary_num_right_angle()
 
-	// Linked List
+	// ----------------- Linked List --------------------
 	// Creating two linked lists
 	fmt.Println()
 	fmt.Println("--------------------------------------------------")
@@ -112,6 +113,24 @@ func main() {
 	// Printing the result linked list
 	fmt.Println("... Addition of LinkedList elements ...")
 	linked_list.Printll(result) // Output should be 7 -> 0 -> 8 (which is 807)
+
+	// ----------------- CHANNELS --------------------
+	channels.Buffered_chan()
+	channels.Unbuffered_chan()
+
+	// Horizontal Interview. Stack go routine
+	//this is how it should be done
+	channels.Mystack()
+	// this is what I did during test
+	channels.MyApproach_Mystack([]int{1, 2, 3, 4})
+
+	channels.Producer_Consumer()
+
+	// ----------------- REST APIs --------------------
+	// Assessment
+	// Comments so that application doesn't start
+	// rest_api.CreateEndpoints()
+	// http.ListenAndServe(":8080", nil)
 }
 
 // SA Interview
