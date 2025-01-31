@@ -46,6 +46,23 @@ func main() {
 	myarr2 := []int{2, -23, 5, 1, 13}
 	basic_programs.Max_ele_in_arr(myarr2)
 
+	// Fibonacci Series for 10 elements
+	fibo_series := basic_programs.Fibonacci(10)
+	fmt.Println(fibo_series)
+
+	// Check if number is in fibonacci series
+	n := 11
+	isfibo := basic_programs.Contains_ele_fibo(fibo_series, n)
+	fmt.Printf("fibonacci series contains number %d : %t", n, isfibo)
+	fmt.Println()
+
+	// Display n prime numbers
+	s := 10
+	fmt.Println(basic_programs.Prime_numbers_Series(s))
+
+	// Check if number is prime number
+	fmt.Println("---- Num_is_prime ----")
+	fmt.Println(basic_programs.Num_is_prime(5))
 }
 
 // SA Interview
