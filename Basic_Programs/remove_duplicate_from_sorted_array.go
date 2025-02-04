@@ -32,20 +32,39 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 package basic_programs
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
-func RemoveDuplicates(nums []int) int {
-	fmt.Println("---- RemoveDuplicates ----")
-	k := 1 // Start with 1 because the first element is always unique
+// func RemoveDuplicates(nums []int) int {
+// 	fmt.Println("---- RemoveDuplicates ----")
+// 	k := 1 // Start with 1 because the first element is always unique
+// 	for i := 1; i < len(nums); i++ {
+// 		fmt.Println("nums[i]:", nums[i])
+// 		if nums[i] != nums[i-1] { // Compare with the previous element
+// 			fmt.Println("nums[i]:", nums[i], "nums[i-1]:", nums[i-1])
+// 			nums[k] = nums[i] // Place the unique element at position k
+// 			fmt.Println("nums[i]:", nums[i], "nums[k]:", nums[k])
+// 			k++ // Increment the index for the next unique element
+// 		}
+// 	}
+// 	fmt.Println("removed :", nums[k])
+// 	return k
+// }
+
+func RemoveDuplicates(nums []int) []int {
+	fmt.Println("here")
+	if len(nums) == 0 {
+		return nums
+	}
+	sort.Ints(nums)
+	fmt.Println(nums)
+	uniqueEle := []int{nums[0]}
 	for i := 1; i < len(nums); i++ {
-		fmt.Println("nums[i]:", nums[i])
-		if nums[i] != nums[i-1] { // Compare with the previous element
-			fmt.Println("nums[i]:", nums[i], "nums[i-1]:", nums[i-1])
-			nums[k] = nums[i] // Place the unique element at position k
-			fmt.Println("nums[i]:", nums[i], "nums[k]:", nums[k])
-			k++ // Increment the index for the next unique element
+		if nums[i] != nums[i-1] {
+			uniqueEle = append(uniqueEle, nums[i])
 		}
 	}
-	fmt.Println(nums)
-	return k
+	return uniqueEle
 }

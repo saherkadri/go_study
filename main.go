@@ -77,6 +77,9 @@ func main() {
 	k := basic_programs.RemoveDuplicates(array1)
 	fmt.Println(k)
 
+	// Find sum of triplets
+	basic_programs.FindTriplets(k, 12)
+
 	// Remove specified element from array
 	remove_ele := 3
 	res := basic_programs.RemoveElement(array1, remove_ele)
@@ -118,9 +121,10 @@ func main() {
 	channels.Buffered_chan()
 	channels.Unbuffered_chan()
 
-	// Horizontal Interview. Stack go routine
+	// ----------------- Horizontal Interview. Stack go routine -----------------
 	//this is how it should be done
 	channels.Mystack()
+
 	// this is what I did during test
 	channels.MyApproach_Mystack([]int{1, 2, 3, 4})
 
@@ -131,6 +135,35 @@ func main() {
 	// Comments so that application doesn't start
 	// rest_api.CreateEndpoints()
 	// http.ListenAndServe(":8080", nil)
+
+	// ----------------- Interview Questions Deutsche Bank --------------------
+
+	// what is output of below code.
+	// 1) Address of x
+	// 2) Error
+	// 3) 0 --> I choose Right Answer
+	// 4) 5
+	// 	x := 5
+	// 	myfunc(&x)
+	// 	fmt.Println("x is :", x)
+
+	// 	// what will below code print
+	// 	// 1) It will print "After main method and exit"
+	// 	// 2) It will print only "Main routine" --> I choose Right Answer
+	// 	// 3) It will create new go rountine but won't wait for it to complete to display "After main method"
+	// 	// 4) Non of above
+	// 	go myDisplay()
+	// 	fmt.Println("Main routine")
+
+	// }
+
+	// func myDisplay() {
+	// 	fmt.Println("After main method")
+	// 	//Code here
+	// }
+
+	// func myfunc(a *int) {
+	// 	*a = 0
 }
 
 // SA Interview
