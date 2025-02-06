@@ -54,7 +54,7 @@ import (
 // }
 
 func RemoveDuplicates(nums []int) []int {
-	fmt.Println("here")
+	fmt.Println("---- RemoveDuplicates ----")
 	if len(nums) == 0 {
 		return nums
 	}

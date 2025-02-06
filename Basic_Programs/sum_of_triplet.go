@@ -1,6 +1,9 @@
 package basic_programs
 
+import "fmt"
+
 func FindTriplets(arr []int, target int) [][]int {
+	fmt.Println("---- FindTriplets ----")
 	var triplets [][]int
 	//sort.Ints(arr) // Sort the array
 

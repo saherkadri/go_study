@@ -77,13 +77,18 @@ func main() {
 	k := basic_programs.RemoveDuplicates(array1)
 	fmt.Println(k)
 
-	// Find sum of triplets
-	basic_programs.FindTriplets(k, 12)
+	// Find sum of pairs and triplets
+	fmt.Println(basic_programs.FindTriplets(k, 12))
+	basic_programs.Find_pairs_of_ele_equal_to_sum()
 
 	// Remove specified element from array
 	remove_ele := 3
 	res := basic_programs.RemoveElement(array1, remove_ele)
 	fmt.Println(res)
+
+	// Intersected elements of two arrays
+	basic_programs.Intersect_elements_two_array()
+	basic_programs.Find_duplicate_two_arr()
 
 	// ----------------- Pattern Printing -----------------
 	patterns.Rectangle()
@@ -129,6 +134,9 @@ func main() {
 	channels.MyApproach_Mystack([]int{1, 2, 3, 4})
 
 	channels.Producer_Consumer()
+
+	// again interview question on go routine
+	channels.Even_Odd_Routines()
 
 	// ----------------- REST APIs --------------------
 	// Assessment
